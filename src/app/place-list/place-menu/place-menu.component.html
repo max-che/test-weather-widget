@@ -1,0 +1,7 @@
+<ul>
+	<li *ngFor="let place of placeTypes();">
+		<a href="#"
+		   (click)="onChooseType($event.target.innerText)"
+		   [ngClass]="{'is-active': place === chosenType}">{{place}}</a>
+	</li>
+</ul>

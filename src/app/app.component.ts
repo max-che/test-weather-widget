@@ -9,6 +9,4 @@ import {Place, places$} from '../assets/mocks/places';
 })
 export class AppComponent {
 	public title = 'Hot Weather Widget';
-	public places$: Observable<Place[]> = places$;
-
 }

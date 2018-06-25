@@ -79,6 +79,16 @@ h1 {
 	font-size:1em;
 	color: #fff;
 }
+.ele-strip ul li a:hover {
+	text-decoration: underline;
+}
+.ele-strip ul li a.is-active {
+	color: #000000;
+	cursor: default;
+}
+.ele-strip ul li a.is-active:hover {
+	text-decoration: none;
+}
 /*--teddy-bear--*/
 .teddy-bear {
 	text-align: center;
@@ -198,7 +208,7 @@ i.text-info{
 	font-size: 1.2em;
 }
 .activity-img{
-	text-align:center;
+	text-align:right;
 }
 .activity-img img{
 	display:inline-block;
@@ -261,8 +271,15 @@ i.text-info{
 	float: right;
 	width: 50%;
 }
+.activity-img ul {
+	font-size: 0;
+}
 .activity-img ul li {
+	margin: 2px 2px 0 0;
 	display: inline-block;
+}
+.activity-img ul li:nth-of-type(3) {
+	margin-right: 0;
 }
 .activity-img ul li img{
 	border-radius:50px;
