@@ -1,7 +1,7 @@
 <ul>
-	<li *ngFor="let place of placeTypes();">
-		<a href="#"
-		   (click)="onChooseType($event.target.innerText)"
+	<li *ngFor="let place of placeTypes;">
+		<a (click)="onChooseType($event.target.innerText)"
 		   [ngClass]="{'is-active': place === chosenType}">{{place}}</a>
+		<!-- TODO: $event.target.innerText - надо оперировать сущностями, а не представлением -->
 	</li>
 </ul>

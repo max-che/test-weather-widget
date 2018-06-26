@@ -1,18 +1,19 @@
 <div *ngIf="places$ | async as places; else loading">
-	<div class="element-bg-img"><img [src]="currentType.img" alt="" class="img-responsive"></div>
+	<div class="element-bg-img"><img [src]="currentPlace.img" alt="" class="img-responsive"></div>
 	<div class="element-left-bottom">
-		<div class="ele-strip place-menu" (chooseType)="currentType = $event"></div>
+		<div class="ele-strip place-menu" (chooseType)="onChoseType($event, places)"></div>
 		<div class="village">
-			<h3>Righteous indignation & like</h3>
+			<h3>{{title}}</h3>
 			<span class="line"></span>
 			<div class="activity_box">
 				<div class="scrollbar" id="style-2">
 					<div class="activity-row place-card"
+						 [ngClass]="{'is-active': currentPlace === place}"
 						 *ngFor="let place of places | filterPlacesByType: currentType"
-						 [place]="place"></div>
+						 [place]="place" (click)="changeCurrentPlace(place); currentPlace = place;"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<ng-template #loading><span style="color: #ffffff">loading...</span></ng-template>
+<ng-template #loading><span style="color: #ffffff">loading places...</span></ng-template>

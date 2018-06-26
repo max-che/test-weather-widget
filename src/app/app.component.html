@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>{{title}}</h1>
 <div class="element">
-	<div class="element-left place-list"></div>
-	<div class="element-right details">123</div>
-	<div class="clear"> </div>
+	<div class="element-left place-list" (currentPlaceChange)="currentPlace = $event;"></div>
+	<div class="element-right place-details" [place]="currentPlace" *ngIf="currentPlace"></div>
+	<div class="clear"></div>
 </div>
 <div class="copy-right">
 	<p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>

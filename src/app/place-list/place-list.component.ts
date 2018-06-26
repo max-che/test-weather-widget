@@ -1,21 +1,44 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Place, places$, placeType } from '../../assets/mocks/places';
-import { T } from '@angular/core/src/render3';
+import { Place, places$, placeType, placeTypesArray } from '../../assets/mocks/places';
 
 @Component({
 	selector: '.place-list',
 	templateUrl: './place-list.component.html',
 	styleUrls: ['./place-list.component.css']
 })
-export class PlaceListComponent {
+
+export class PlaceListComponent implements OnInit {
+
+	@Output()
+	public currentPlaceChange: EventEmitter<Place> = new EventEmitter();
 
 	public places$: Observable<Place[]> = places$;
+	public currentPlace: Place;
+	public placeTypes: string[] = placeTypesArray;
+	public currentType: string = this.placeTypes[0];
 
-	public currentType: string = placeType[0];
+	public title = 'Righteous indignation & like';
 
-	public placeTypes() {
-		const allKeys = Object.keys(placeType);
-		return allKeys.slice(allKeys.length / 2);
+	public onChoseType(type: string, places: Place[]): void {
+		this.currentType = type;
+		this.selectFirstPlace(places);
+	}
+
+	private selectFirstPlace(places: Place[]) {
+		this.changeCurrentPlace(places
+			.filter(place => place.type === placeType[this.currentType])[0]);
+	}
+
+	public changeCurrentPlace(place: Place): void {
+		console.log('changeCurrentPlace: ', place);
+		this.currentPlace = place;
+		this.currentPlaceChange.emit(place);
+	}
+
+	ngOnInit() {
+		this.places$.subscribe((places: Place[]) => {
+			this.selectFirstPlace(places);
+		});
 	}
 }

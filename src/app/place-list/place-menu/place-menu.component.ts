@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { placeType } from '../../../assets/mocks/places';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { placeTypesArray } from '../../../assets/mocks/places';
 
 @Component({
 	selector: '.place-menu',
@@ -12,12 +12,8 @@ export class PlaceMenuComponent {
 	@Output()
 	public chooseType: EventEmitter<string> = new EventEmitter();
 
-	public chosenType: string = placeType[0];
-
-	public placeTypes() {
-		const allKeys = Object.keys(placeType);
-		return allKeys.slice(allKeys.length / 2);
-	}
+	public placeTypes: string[] = placeTypesArray;
+	public chosenType: string = this.placeTypes[0];
 
 	public onChooseType(value: string): void {
 		this.chooseType.emit(value);

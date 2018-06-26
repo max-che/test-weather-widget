@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Place } from '../../../assets/mocks/places';
 
 @Component({
@@ -7,7 +7,6 @@ import { Place } from '../../../assets/mocks/places';
 	styleUrls: ['./place-card.component.css']
 })
 export class PlaceCardComponent {
-
 	@Input()
 	public place: Place;
 }

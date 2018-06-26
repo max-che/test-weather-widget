@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {Observable} from 'rxjs';
-import {Place, places$} from '../assets/mocks/places';
+import {Place} from '../assets/mocks/places';
 
 @Component({
 	selector: 'app-root',
@@ -9,4 +8,5 @@ import {Place, places$} from '../assets/mocks/places';
 })
 export class AppComponent {
 	public title = 'Hot Weather Widget';
+	public currentPlace: Place;
 }
