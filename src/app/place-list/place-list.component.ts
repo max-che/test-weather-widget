@@ -31,7 +31,6 @@ export class PlaceListComponent implements OnInit {
 	}
 
 	public changeCurrentPlace(place: Place): void {
-		console.log('changeCurrentPlace: ', place);
 		this.currentPlace = place;
 		this.currentPlaceChange.emit(place);
 	}

@@ -26,6 +26,7 @@ export interface Social {
 
 export interface Place {
 	address: string;
+	full_address: string;
 	img: string;
 	phone: number;
 	preview: string[];
@@ -37,257 +38,275 @@ export interface Place {
 
 const places: Place[] = [
 	{
-		'address': 'Bridgewater, Kula',
-		'img': 'http://placehold.it/382x229/ff8091?text=Bridgewater, Kula',
-		'phone': 16741096066,
-		'description': 'proident adipisicing incididunt fugiat',
+		'full_address': 'Ingraham Street, Goldfield, Iowa',
+		'address': 'Ingraham,  Goldfield',
+		'img': 'http://placehold.it/382x229/99ffd1?text=Ingraham Street, Goldfield, Iowa',
+		'phone': 14103902094,
+		'description': 'cillum exercitation fugiat amet voluptate',
 		'preview': [
-			'http://placehold.it/50/995590?text=A'
+			'http://placehold.it/50/bf8d3b?text=T',
+			'http://placehold.it/50/3f05d2?text=C'
 		],
 		'weather': {
-			'title': 'enim tempor exercitation',
-			'icon': 'cloudy.png',
-			'water': 11,
-			'temperature': 21
-		},
-		'social_info': {
-			'title': 'Sest_eiusmod',
-			'img': 'http://placehold.it/100/1c149c?text=BigPic',
-			'followers': 102,
-			'following': 153
-		},
-		'type': 0
-	},
-	{
-		'address': 'Lancaster, Centerville',
-		'img': 'http://placehold.it/382x229/ffa985?text=Lancaster, Centerville',
-		'phone': 12412774157,
-		'description': 'esse consectetur cupidatat cupidatat duis',
-		'preview': [
-			'http://placehold.it/50/3acc71?text=C',
-			'http://placehold.it/50/deaff9?text=D'
-		],
-		'weather': {
-			'title': 'dolor pariatur adipisicing',
-			'icon': 'cloudy.png',
-			'water': 19,
-			'temperature': 21
-		},
-		'social_info': {
-			'title': 'Aad_&_eiusmod',
-			'img': 'http://placehold.it/100/692385?text=BigPic',
-			'followers': 20,
-			'following': 74
-		},
-		'type': 3
-	},
-	{
-		'address': 'Montgomery, Hannasville',
-		'img': 'http://placehold.it/382x229/c7fffd?text=Montgomery, Hannasville',
-		'phone': 19465440213,
-		'description': 'adipisicing ut sit et nulla',
-		'preview': [
-			'http://placehold.it/50/8ad7eb?text=A'
-		],
-		'weather': {
-			'title': 'amet veniam minim',
-			'icon': 'cloudy.png',
-			'water': 20,
-			'temperature': 38
-		},
-		'social_info': {
-			'title': 'Cvelit_tempor',
-			'img': 'http://placehold.it/100/bc11f0?text=BigPic',
-			'followers': 109,
-			'following': 83
-		},
-		'type': 1
-	},
-	{
-		'address': 'Knickerbocker, Marbury',
-		'img': 'http://placehold.it/382x229/94fff5?text=Knickerbocker, Marbury',
-		'phone': 16968441259,
-		'description': 'dolor non do irure amet',
-		'preview': [
-			'http://placehold.it/50/29711b?text=L'
-		],
-		'weather': {
-			'title': 'sit ut eiusmod',
-			'icon': 'cloudy.png',
-			'water': 24,
-			'temperature': 25
-		},
-		'social_info': {
-			'title': 'Dmagna aka esse',
-			'img': 'http://placehold.it/100/9731f4?text=BigPic',
-			'followers': 46,
-			'following': 170
-		},
-		'type': 2
-	},
-	{
-		'address': 'Banner, Allentown',
-		'img': 'http://placehold.it/382x229/a8a9ff?text=Banner, Allentown',
-		'phone': 17570752170,
-		'description': 'proident est irure irure aute',
-		'preview': [
-			'http://placehold.it/50/5fddbe?text=C'
-		],
-		'weather': {
-			'title': 'laborum id consectetur',
-			'icon': 'cloudy.png',
-			'water': 16,
-			'temperature': 19
-		},
-		'social_info': {
-			'title': 'Cea_voluptate',
-			'img': 'http://placehold.it/100/9ef7ca?text=BigPic',
-			'followers': 35,
-			'following': 184
-		},
-		'type': 3
-	},
-	{
-		'address': 'Dupont, Bradenville',
-		'img': 'http://placehold.it/382x229/8593ff?text=Dupont, Bradenville',
-		'phone': 12554995962,
-		'description': 'enim fugiat in enim Lorem',
-		'preview': [
-			'http://placehold.it/50/5dd0b3?text=A'
-		],
-		'weather': {
-			'title': 'voluptate laboris aute',
-			'icon': 'cloudy.png',
-			'water': 15,
-			'temperature': 32
-		},
-		'social_info': {
-			'title': 'Alabore_&_velit',
-			'img': 'http://placehold.it/100/c936c5?text=BigPic',
-			'followers': 88,
-			'following': 129
-		},
-		'type': 2
-	},
-	{
-		'address': 'Agate, Freetown',
-		'img': 'http://placehold.it/382x229/ff99eb?text=Agate, Freetown',
-		'phone': 15392096324,
-		'description': 'id sunt magna veniam ut',
-		'preview': [
-			'http://placehold.it/50/cb63e0?text=C',
-			'http://placehold.it/50/c8192d?text=D',
-			'http://placehold.it/50/57d395?text=A'
-		],
-		'weather': {
-			'title': 'commodo exercitation magna',
-			'icon': 'cloudy.png',
-			'water': 15,
-			'temperature': 31
-		},
-		'social_info': {
-			'title': 'Eduis duis',
-			'img': 'http://placehold.it/100/dbbfd2?text=BigPic',
-			'followers': 41,
-			'following': 55
-		},
-		'type': 0
-	},
-	{
-		'address': 'Bennet, Bartley',
-		'img': 'http://placehold.it/382x229/fffcb3?text=Bennet, Bartley',
-		'phone': 12980173737,
-		'description': 'proident fugiat ea officia voluptate',
-		'preview': [
-			'http://placehold.it/50/c474e4?text=M',
-			'http://placehold.it/50/5a22d5?text=C',
-			'http://placehold.it/50/8aab89?text=L'
-		],
-		'weather': {
-			'title': 'culpa consequat esse',
+			'title': 'reprehenderit occaecat quis',
 			'icon': 'cloudy.png',
 			'water': 12,
-			'temperature': 33
+			'temperature': 12
 		},
 		'social_info': {
-			'title': 'Mcupidatat anim',
-			'img': 'http://placehold.it/100/77a86f?text=BigPic',
-			'followers': 83,
-			'following': 134
+			'title': 'Asunt-sint',
+			'img': 'http://placehold.it/100/59b8e1?text=TwitPic',
+			'followers': 38,
+			'following': 191
 		},
 		'type': 0
 	},
 	{
-		'address': 'Beadel, Westwood',
-		'img': 'http://placehold.it/382x229/fbffb8?text=Beadel, Westwood',
-		'phone': 16230515957,
-		'description': 'anim ex dolore elit tempor',
+		'full_address': 'Stuyvesant Avenue, Glasgow, Maryland',
+		'address': 'Stuyvesant,  Glasgow',
+		'img': 'http://placehold.it/382x229/ff9e99?text=Stuyvesant Avenue, Glasgow, Maryland',
+		'phone': 12987780330,
+		'description': 'tempor reprehenderit ex culpa cupidatat',
 		'preview': [
-			'http://placehold.it/50/440a0b?text=N',
-			'http://placehold.it/50/8af384?text=C',
-			'http://placehold.it/50/440a0b?text=N',
-			'http://placehold.it/50/cfbdf0?text=P'
+			'http://placehold.it/50/86ee4c?text=M',
+			'http://placehold.it/50/db7497?text=I'
 		],
 		'weather': {
-			'title': 'ex ex aute',
+			'title': 'Lorem ullamco labore',
 			'icon': 'cloudy.png',
-			'water': 26,
+			'water': 18,
+			'temperature': 18
+		},
+		'social_info': {
+			'title': 'Ndolore aka officia',
+			'img': 'http://placehold.it/100/1120a7?text=TwitPic',
+			'followers': 41,
+			'following': 178
+		},
+		'type': 0
+	},
+	{
+		'full_address': 'Himrod Street, Starks, Florida',
+		'address': 'Himrod,  Starks',
+		'img': 'http://placehold.it/382x229/ffb3f0?text=Himrod Street, Starks, Florida',
+		'phone': 17199546868,
+		'description': 'voluptate eiusmod id irure duis',
+		'preview': [
+			'http://placehold.it/50/faff7?text=S'
+		],
+		'weather': {
+			'title': 'ea adipisicing incididunt',
+			'icon': 'cloudy.png',
+			'water': 21,
 			'temperature': 30
 		},
 		'social_info': {
-			'title': 'Cnon_&_laboris',
-			'img': 'http://placehold.it/100/229311?text=BigPic',
+			'title': 'Avelit aka amet',
+			'img': 'http://placehold.it/100/a5c76c?text=TwitPic',
+			'followers': 111,
+			'following': 161
+		},
+		'type': 0
+	},
+	{
+		'full_address': 'Thornton Street, Blue, Vermont',
+		'address': 'Thornton,  Blue',
+		'img': 'http://placehold.it/382x229/ffdac7?text=Thornton Street, Blue, Vermont',
+		'phone': 19979080809,
+		'description': 'proident excepteur sunt velit sunt',
+		'preview': [
+			'http://placehold.it/50/3cb875?text=I',
+			'http://placehold.it/50/1fa20f?text=I',
+			'http://placehold.it/50/1fa20f?text=I'
+		],
+		'weather': {
+			'title': 'aliquip reprehenderit dolor',
+			'icon': 'cloudy.png',
+			'water': 23,
+			'temperature': 27
+		},
+		'social_info': {
+			'title': 'Sculpa_consequat',
+			'img': 'http://placehold.it/100/1e3e4a?text=TwitPic',
 			'followers': 112,
-			'following': 200
+			'following': 78
+		},
+		'type': 3
+	},
+	{
+		'full_address': 'Whitty Lane, Independence, Tennessee',
+		'address': 'Whitty,  Independence',
+		'img': 'http://placehold.it/382x229/ffd3bd?text=Whitty Lane, Independence, Tennessee',
+		'phone': 11710840616,
+		'description': 'id anim minim sint nisi',
+		'preview': [
+			'http://placehold.it/50/c2d23f?text=A',
+			'http://placehold.it/50/2e0e73?text=N',
+			'http://placehold.it/50/5d3ecc?text=M',
+			'http://placehold.it/50/b03d3d?text=E'
+		],
+		'weather': {
+			'title': 'reprehenderit do ipsum',
+			'icon': 'cloudy.png',
+			'water': 14,
+			'temperature': 26
+		},
+		'social_info': {
+			'title': 'Iad_reprehenderit',
+			'img': 'http://placehold.it/100/a971d5?text=TwitPic',
+			'followers': 90,
+			'following': 195
+		},
+		'type': 0
+	},
+	{
+		'full_address': 'Montieth Street, Broadlands, Texas',
+		'address': 'Montieth,  Broadlands',
+		'img': 'http://placehold.it/382x229/e4ffb3?text=Montieth Street, Broadlands, Texas',
+		'phone': 17235016413,
+		'description': 'Lorem dolore laborum ex deserunt',
+		'preview': [
+			'http://placehold.it/50/1cb601?text=I',
+			'http://placehold.it/50/1cb601?text=I',
+			'http://placehold.it/50/b98577?text=U'
+		],
+		'weather': {
+			'title': 'amet dolore aliqua',
+			'icon': 'cloudy.png',
+			'water': 23,
+			'temperature': 33
+		},
+		'social_info': {
+			'title': 'Mest_officia',
+			'img': 'http://placehold.it/100/f97f0c?text=TwitPic',
+			'followers': 13,
+			'following': 122
+		},
+		'type': 3
+	},
+	{
+		'full_address': 'Frost Street, Choctaw, Kentucky',
+		'address': 'Frost,  Choctaw',
+		'img': 'http://placehold.it/382x229/b3f4ff?text=Frost Street, Choctaw, Kentucky',
+		'phone': 14409957865,
+		'description': 'pariatur laboris anim esse ad',
+		'preview': [
+			'http://placehold.it/50/2773e6?text=I',
+			'http://placehold.it/50/4845fe?text=E',
+			'http://placehold.it/50/4845fe?text=E'
+		],
+		'weather': {
+			'title': 'voluptate dolor est',
+			'icon': 'cloudy.png',
+			'water': 23,
+			'temperature': 24
+		},
+		'social_info': {
+			'title': 'Aanim nisi',
+			'img': 'http://placehold.it/100/876261?text=TwitPic',
+			'followers': 95,
+			'following': 141
+		},
+		'type': 0
+	},
+	{
+		'full_address': 'Fillmore Place, Lindisfarne, Alabama',
+		'address': 'Fillmore,  Lindisfarne',
+		'img': 'http://placehold.it/382x229/85ffd1?text=Fillmore Place, Lindisfarne, Alabama',
+		'phone': 18085132201,
+		'description': 'aliqua excepteur velit dolor aute',
+		'preview': [
+			'http://placehold.it/50/a72a39?text=C',
+			'http://placehold.it/50/47a2f4?text=R'
+		],
+		'weather': {
+			'title': 'sint consequat occaecat',
+			'icon': 'cloudy.png',
+			'water': 22,
+			'temperature': 10
+		},
+		'social_info': {
+			'title': 'Ncillum_aliqua',
+			'img': 'http://placehold.it/100/373f6a?text=TwitPic',
+			'followers': 92,
+			'following': 170
+		},
+		'type': 0
+	},
+	{
+		'full_address': 'Nova Court, Umapine, Arkansas',
+		'address': 'Nova,  Umapine',
+		'img': 'http://placehold.it/382x229/85ff8f?text=Nova Court, Umapine, Arkansas',
+		'phone': 12942447831,
+		'description': 'nulla duis qui dolor ut',
+		'preview': [
+			'http://placehold.it/50/738f58?text=E',
+			'http://placehold.it/50/3a953d?text=E',
+			'http://placehold.it/50/738f58?text=E',
+			'http://placehold.it/50/718d5e?text=A'
+		],
+		'weather': {
+			'title': 'qui officia laboris',
+			'icon': 'cloudy.png',
+			'water': 25,
+			'temperature': 20
+		},
+		'social_info': {
+			'title': 'Udolor_id',
+			'img': 'http://placehold.it/100/7c72f7?text=TwitPic',
+			'followers': 24,
+			'following': 24
 		},
 		'type': 1
 	},
 	{
-		'address': 'Crosby, Cazadero',
-		'img': 'http://placehold.it/382x229/ff9f8f?text=Crosby, Cazadero',
-		'phone': 17127002388,
-		'description': 'consectetur incididunt excepteur ex id',
+		'full_address': 'Grant Avenue, Tampico, Virgin Islands',
+		'address': 'Grant,  Tampico',
+		'img': 'http://placehold.it/382x229/b9ffa8?text=Grant Avenue, Tampico, Virgin Islands',
+		'phone': 18447036949,
+		'description': 'id excepteur aliquip non sit',
 		'preview': [
-			'http://placehold.it/50/e2f533?text=I'
+			'http://placehold.it/50/59260f?text=A',
+			'http://placehold.it/50/e6782a?text=N'
 		],
 		'weather': {
-			'title': 'esse sunt aliqua',
+			'title': 'exercitation nulla qui',
 			'icon': 'cloudy.png',
-			'water': 11,
-			'temperature': 35
+			'water': 19,
+			'temperature': 22
 		},
 		'social_info': {
-			'title': 'Llabore-quis',
-			'img': 'http://placehold.it/100/668ddf?text=BigPic',
-			'followers': 35,
-			'following': 38
+			'title': 'Vsint-cupidatat',
+			'img': 'http://placehold.it/100/b569d5?text=TwitPic',
+			'followers': 51,
+			'following': 34
 		},
-		'type': 2
+		'type': 1
 	},
 	{
-		'address': 'Havens, Byrnedale',
-		'img': 'http://placehold.it/382x229/85ffce?text=Havens, Byrnedale',
-		'phone': 17747827160,
-		'description': 'veniam sit anim cillum irure',
+		'full_address': 'Berkeley Place, Weogufka, Georgia',
+		'address': 'Berkeley,  Weogufka',
+		'img': 'http://placehold.it/382x229/e5a8ff?text=Berkeley Place, Weogufka, Georgia',
+		'phone': 16528553125,
+		'description': 'non nulla dolore officia nulla',
 		'preview': [
-			'http://placehold.it/50/53b5c2?text=E',
-			'http://placehold.it/50/53b5c2?text=E',
-			'http://placehold.it/50/747115?text=E',
-			'http://placehold.it/50/8f2773?text=E'
+			'http://placehold.it/50/bfc458?text=S',
+			'http://placehold.it/50/53cf16?text=E',
+			'http://placehold.it/50/25057e?text=M'
 		],
 		'weather': {
-			'title': 'veniam eiusmod Lorem',
+			'title': 'pariatur mollit ut',
 			'icon': 'cloudy.png',
-			'water': 11,
-			'temperature': 11
+			'water': 20,
+			'temperature': 25
 		},
 		'social_info': {
-			'title': 'Eirure id',
-			'img': 'http://placehold.it/100/2e3da6?text=BigPic',
-			'followers': 75,
-			'following': 188
+			'title': 'Iincididunt&consectetur',
+			'img': 'http://placehold.it/100/932a33?text=TwitPic',
+			'followers': 63,
+			'following': 141
 		},
-		'type': 0
+		'type': 2
 	}
 ];
 
