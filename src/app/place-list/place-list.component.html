@@ -1,4 +1,4 @@
-<div *ngIf="places$ | async as places; else loading">
+<div *ngIf="allPlaces as places; else loading">
 	<div class="element-bg-img"><img [src]="currentPlace.img" alt="" class="img-responsive"></div>
 	<div class="element-left-bottom">
 		<div class="ele-strip place-menu" (chooseType)="onChoseType($event, places)"></div>

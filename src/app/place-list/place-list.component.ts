@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Place, places$, placeType, placeTypesArray } from '../../assets/mocks/places';
+import { Place, placeType, placeTypesArray } from '../../assets/mocks/places';
+import { PlacesService } from '../shared/services/places.service';
 
 @Component({
 	selector: '.place-list',
@@ -13,7 +14,7 @@ export class PlaceListComponent implements OnInit {
 	@Output()
 	public currentPlaceChange: EventEmitter<Place> = new EventEmitter();
 
-	public places$: Observable<Place[]> = places$;
+	public allPlaces: Place[];
 	public currentPlace: Place;
 	public placeTypes: string[] = placeTypesArray;
 	public currentType: string = this.placeTypes[0];
@@ -35,9 +36,13 @@ export class PlaceListComponent implements OnInit {
 		this.currentPlaceChange.emit(place);
 	}
 
+	constructor(private PlaceService: PlacesService) {}
+
 	ngOnInit() {
-		this.places$.subscribe((places: Place[]) => {
+		this.PlaceService.getAll().subscribe((places: Place[]) => {
+			this.allPlaces = places;
 			this.selectFirstPlace(places);
 		});
+
 	}
 }
