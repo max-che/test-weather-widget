@@ -38,7 +38,7 @@ export class PlaceListComponent implements OnInit {
 
 	constructor(private PlaceService: PlacesService) {}
 
-	ngOnInit() {
+	public ngOnInit() {
 		this.PlaceService.getAll().subscribe((places: Place[]) => {
 			this.allPlaces = places;
 			this.selectFirstPlace(places);
